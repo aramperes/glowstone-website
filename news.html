@@ -120,7 +120,7 @@
     </script>
     <script type="text/javascript">
     $(function() {
-      $.getJSON("https://api.github.com/repos/GlowstoneMC/Glowstone/commits?access_token=8410576e3d6bb41f20bc8cbdf613017544a0a552", function(data) {
+      $.getJSON("https://api.github.com/repos/GlowstoneMC/Glowstone/commits?access_token=5363f44a0a48a491288d535255df8d36d191e880", function(data) {
         var commit = data[0].commit;
         var author = commit.committer.name;
         var sha = commit.url.replace("https://api.github.com/repos/GlowstoneMC/Glowstone/git/commits/", "");
