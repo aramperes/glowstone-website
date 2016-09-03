@@ -16,6 +16,9 @@
     border-color: white;
     color: #f7931d;
 }
+.content a:not(.button):hover {
+  border-bottom-color: #f7931d;
+}
 a.nav-item.is-tab:hover {
   border-bottom: 1px solid #f7931d;
   border-top: 1px solid transparent;
@@ -23,6 +26,10 @@ a.nav-item.is-tab:hover {
 .footer {
   background-color: #f5f7fa;
   padding: 40px 25px 30px;
+}
+.footer a:not(.icon):hover, .footer a:visited:not(.icon):hover {
+  border-bottom-color: #f7931d;
+  color: #f7931d;
 }
 a {
   color: #f7931d;
