@@ -1,13 +1,13 @@
 $(function() {
   // Get the data from the forums
   var topicArray = {};
-  $.getJSON("https://momoperes.ca/proxy/forums_news.php", function(data) {
+  $.getJSON(getURL("https://forums.glowstone.net/api/category/12/announcements"), function(data) {
     var topics = data.topics;
     for (var i = 0; i < topics.length; i++) {
       var t = topics[i];
       var html = "";
       if (!t.deleted) {
-        var api = "https://momoperes.ca/proxy/forums_post.php?slug=" + t.slug;
+        var api = getURL("https://forums.glowstone.net/api/topic/" + t.slug);
         $.ajax({
           dataType: "json",
           url: api,
