@@ -168,30 +168,6 @@
             </div>
           </div>
         </div>
-<!--
-        <div class="columns is-fullwidth">
-          <div class="column is-3 is-fullwidth">
-            <div class="content card">
-              <h3>The APIs you know and love.</h3>
-              <h4>Just because Glowstone is original doesn't mean it can't be familiar.</h4>
-              Use or code Bukkit plugins and they'll work natively with Glowstone, and enjoy first-class Bukkit2Sponge support for your Sponge powered plugins.
-            </div>
-          </div>
-          <div class="column is-3 is-fullwidth">
-            <div class="content card">
-              <h3>Simplicity is the mother of performance</h3>
-              <h4>Glowstone's simplicity affords it a performance improvement over CraftBukkit and other servers.</h4>
-              By design, our code is simple and doesn't have to jump through hoops to work around the official Minecraft server in order to improve performance or functionality.
-            </div>
-          </div>
-          <div class="column is-3 is-fullwidth">
-            <div class="content card">
-              <h3>Any way you want it</h3>
-              <h4>Glowstone is open source and community centric. </h4>
-              Anyone can work on Glowstone, so it reflects what our community wants. And, with Glowstone's MIT license, you can create a private fork to suit the exact needs of your server. Don't know code? Provide your input in the design process!
-            </div>
-          </div>
-        </div>-->
       </div>
     </section>
     <section class="section">
@@ -210,35 +186,43 @@
             </div>
           </article>
           <br>
-          <h4 class="title is-4">Latest version</h4>
-          <a class="button is-primary title is-5" style="color: white;" id="download-latest"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.10.2</span></a>
-
-          <br><br>
-          <article class="message is-warning" id="download-warning" style="display: none;">
-            <div class="message-header">
-              Warning
-            </div>
-            <div class="message-body">
-              <strong>This is a bleeding-edge build.</strong><br>
-              You may encounter bugs, world corruption and other issues.
+          <div class="columns">
+            <div class="column is-half">
+              <h4 class="title is-4">Latest version</h4>
+              <a class="button is-primary title is-5" style="color: white;" id="download-latest"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.10.2</span></a>
               <br><br>
-              <u>Please report any bugs and concerns to our <a href="https://github.com/GlowstoneMC/Glowstone/issues">issue tracker</a> or on our <a href="https://forums.glowstone.net/">forums</a>.</u>
-              <br>
+              <h4 class="title is-5">Snapshots</h4>
+              <p>Bleeding-edge builds for Minecraft snapshots for the next major release.</p>
+              <a class="button is-warning" id="download-snapshot"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 16w35a</span></a>
+              <br><br>
+              <article class="message is-warning" id="download-warning" style="display: none;">
+                <div class="message-header">
+                  Warning
+                </div>
+                <div class="message-body">
+                  <strong>This is a bleeding-edge build.</strong><br>
+                  You may encounter bugs, world corruption and other issues.
+                  <br><br>
+                  <u>Please report any bugs and concerns to our <a href="https://github.com/GlowstoneMC/Glowstone/issues">issue tracker</a> or on our <a href="https://forums.glowstone.net/">forums</a>.</u>
+                  <br>
+                </div>
+              </article>
             </div>
-          </article>
-          <h4 class="title is-5">Snapshots</h4>
-          <p>Bleeding-edge builds for Minecraft snapshots for the next major release.</p>
-          <a class="button is-warning" href="https://204-33457443-gh.circle-artifacts.com/0//tmp/circle-artifacts.qebqzFq/glowstone++-1.11-16w35a-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 16w35a</span></a>
-          <br><br>
-          <h4 class="title is-5">Older versions (not recommended)</h4>
-          <p>These versions are no longer supported or developed. They may lack important fixes and features.</p>
-          <a class="button is-warning" style="margin-right: 10px;" href="https://github.com/GlowstoneMC/Glowstone/releases/download/1.9.4/glowstone.-1.9.4-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.9.x</span></a>
-          <a class="button is-warning" href="https://github.com/GlowstoneMC/Glowstone/releases/download/v1.8.9/glowstone.-1.8.9-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.8.9</span></a>
-          <br><br>
-          <h4 class="title is-5">Legacy versions (not recommended)</h4>
-          <p>Legacy builds dating from the pre-Glowstone++ <a href="https://github.com/GlowstoneMC/Glowstone-Legacy">repository</a>.</p>
-          <a class="button is-danger" style="margin-right: 10px;" href="https://github.com/GlowstoneMC/Glowstone-Legacy/releases/download/1.7.9/glowstone-1.7.9-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.7.9</span></a>
-          <a class="button is-danger" href="https://github.com/GlowstoneMC/Glowstone-Legacy/releases/download/1.7.2/glowstone-1.7.2-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.7.2</span></a>
+            <div class="column is-half">
+              <h4 class="title is-4">Previous versions</h4>
+              <h4 class="title is-5">Previous Minecraft versions (not recommended)</h4>
+              <p>These versions are no longer supported or developed. They may lack important fixes and features.</p>
+              <a class="button is-warning" style="margin-right: 10px;" href="https://github.com/GlowstoneMC/Glowstone/releases/download/1.9.4/glowstone.-1.9.4-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.9.x</span></a>
+              <a class="button is-warning" href="https://github.com/GlowstoneMC/Glowstone/releases/download/v1.8.9/glowstone.-1.8.9-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.8.9</span></a>
+              <br><br>
+              <h4 class="title is-5">Legacy versions (not recommended)</h4>
+              <p>Legacy builds dating from the pre-Glowstone++ <a href="https://github.com/GlowstoneMC/Glowstone-Legacy">repository</a>.</p>
+              <a class="button is-danger" style="margin-right: 10px;" href="https://github.com/GlowstoneMC/Glowstone-Legacy/releases/download/1.7.9/glowstone-1.7.9-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.7.9</span></a>
+              <a class="button is-danger" href="https://github.com/GlowstoneMC/Glowstone-Legacy/releases/download/1.7.2/glowstone-1.7.2-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.7.2</span></a>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </section>
