@@ -1,13 +1,13 @@
 $(function() {
   // Get the data from the forums
   var topicArray = {};
-  $.getJSON("http://momoperes.ca/proxy/forums_news.php", function(data) {
+  $.getJSON("https://momoperes.ca/proxy/forums_news.php", function(data) {
     var topics = data.topics;
     for (var i = 0; i < topics.length; i++) {
       var t = topics[i];
       var html = "";
       if (!t.deleted) {
-        var api = "http://momoperes.ca/proxy/forums_post.php?slug=" + t.slug;
+        var api = "https://momoperes.ca/proxy/forums_post.php?slug=" + t.slug;
         $.ajax({
           dataType: "json",
           url: api,
