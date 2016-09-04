@@ -80,14 +80,17 @@
     <nav class="nav has-shadow">
         <div class="container">
             <div class="nav-left">
-                <a class="nav-item" href="#" id="commit-parent"><div id="commit-details">Loading latest commit...</div></a>
+                <a class="nav-item" href="#" id="commit-parent"><div id="commit-details"><span class="loader" style="display: inline-block;"></span> &nbsp; Loading latest commit...</div></a>
             </div>
         </div>
     </nav>
 
     <section class="section">
-        <div class="container" style=" margin-top: 1000px;">
-
+        <div class="container">
+          <h1 class="title is-2">Forum annoucements</h1>
+          <div id="announcements-parent" style="margin-top:25px;">
+            <div id="announcements-loading" class="loader" style="margin-top:25px;height:50px;width:50px;margin-bottom:300px;"></div>
+          </div>
         </div>
         </div>
     </section>
@@ -105,7 +108,6 @@
                 <div>
                     <iframe class="github-btn" frameborder="0" height="20px" scrolling="0" src="https://ghbtns.com/github-btn.html?user=GlowstoneMC&amp;repo=Glowstone&amp;type=star&amp;count=true" width="105px"></iframe>
                 </div>
-
             </div>
         </div>
     </footer>
@@ -118,20 +120,12 @@
     </script>
     <script src="js/bulma.js">
     </script>
-    <script type="text/javascript">
-    $(function() {
-      $.getJSON("https://api.github.com/repos/GlowstoneMC/Glowstone/commits", function(data) {
-        var commit = data[0].commit;
-        var author = commit.committer.name;
-        var sha = commit.url.replace("https://api.github.com/repos/GlowstoneMC/Glowstone/git/commits/", "");
-        var message = commit.message;
-        var link = "https://github.com/GlowstoneMC/Glowstone/commit/" + sha;
-        $("#commit-parent").attr("href", link);
-        $("#commit-details").html('<span class="fa fa-github"></span>&nbsp;&nbsp; Latest commit:&nbsp;<strong>' + author + '</strong>&nbsp;pushed commit&nbsp;<i>' + sha.substr(0, 7) + '</i>: ' + message);
-      });
-    });
+    <script src="js/github-commit.js">
     </script>
-
+    <script src="js/timeutil.js">
+    </script>
+    <script src="js/news-forums.js">
+    </script>
 </body>
 
 </html>
