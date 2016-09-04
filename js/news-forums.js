@@ -18,20 +18,17 @@ $(function() {
             var date = timeDifference(new Date().getTime(), timestamp);
             var author = topic.posts[0].user.username;
             var comments = topic.posts.length - 1;
-            var content = topic.posts[0].content.replace("<\\n", "");
+            var content = topic.posts[0].content.replace("\\n", "");
             var title = topic.title;
             topicArray['<div class="content box"><h2>' + title + ' <div style="float: right; color: gray">' + comments + ' <span class="fa fa-comment" style="margin-top: 1px;"></span></div><br><h5><a href="' + topicurl + '">Posted</a> by ' + author + ' <strong id="datetest">' + date + '</strong></h5></h2>' + content + '</div>'] = timestamp;
-            console.log("Topiced.");
         }});
       }
     }
 
   }).complete(function() {
-    console.log("Completed.");
     $("#announcements-loading").remove();
     for (var html in topicArray) {
       $("#announcements-parent").html($("#announcements-parent").html() + "<br>" + html);
     }
-
   });
 });
