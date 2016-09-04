@@ -75,13 +75,72 @@
     <nav class="nav has-shadow">
       <div class="container">
         <div class="nav-left">
-          <a class="nav-item is-tab is-active" href="#features">Features</a> <a class="nav-item is-tab" href="#downloads">Downloads</a> <a class="nav-item is-tab" href="#builds">CI Builds</a>
+          <a class="nav-item is-tab" href="#features">Features</a> <a class="nav-item is-tab" href="#downloads">Downloads</a> <a class="nav-item is-tab" href="#builds">CI Builds</a>
         </div>
       </div>
     </nav>
 
     <section class="section">
-      <div class="container" style=" margin-top: 1000px;">
+      <div class="container" id="features" style="padding-top: 20px;">
+        <h1 class="title is-2">Features</h1>
+        <div class="content box">
+          <h1>The APIs you know and love.</h1>
+          <h4>Just because Glowstone is original doesn't mean it can't be familiar.</h4>
+          Use or code Bukkit plugins and they'll work natively with Glowstone, and enjoy first-class Bukkit2Sponge support for your Sponge powered plugins.
+        </div>
+        <br>
+        <div class="content box">
+          <h1>Simplicity is the mother of performance</h1>
+          <h4>Glowstone's simplicity affords it a performance improvement over CraftBukkit and other servers.</h4>
+          By design, our code is simple and doesn't have to jump through hoops to work around the official Minecraft server in order to improve performance or functionality.
+        </div><br>
+        <div class="content box">
+          <h1>Any way you want it</h1>
+          <h4>Glowstone is open-source and community centric. </h4>
+          Anyone can work on Glowstone, so it reflects what our community wants. And, with Glowstone's MIT license, you can create a private fork to suit the exact needs of your server. Don't know code? Provide your input in the design process!
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container" id="downloads" style="padding-top: 20px;">
+        <h1 class="title is-2">Downloads</h1>
+        <div class="content">
+          <article class="message is-info">
+            <div class="message-header">
+              How to use
+            </div>
+            <div class="message-body">
+              Glowstone is a standalone Java server executable. You can run it from your command prompt:<br>&nbsp;
+              <pre><code>java -jar glowstone.jar</code></pre>
+              <br>
+              You can read more about the installation instructions <a href="https://github.com/GlowstoneMC/Glowstone/wiki/Installation">here</a>.
+            </div>
+          </article>
+          <br>
+          <h4 class="title is-4">Latest version</h4>
+          <a class="button is-primary" id="download-latest"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.10.2</span></a>
+
+          <br><br>
+          <article class="message is-warning" id="download-warning" style="display: none;">
+            <div class="message-header">
+              Warning
+            </div>
+            <div class="message-body">
+              <strong>This is a bleeding-edge build.</strong><br>
+              You may encounter bugs, world corruption and other issues.
+              <br><br>
+              <u>Please report any bugs and concerns to our <a href="https://github.com/GlowstoneMC/Glowstone/issues">issue tracker</a> or on our <a href="https://forums.glowstone.net/">forums</a>.</u>
+              <br>
+              <!--<a class="button is-success" ><span class="icon"><i class="fa fa-download"></i></span> <span>Download</span></a>
+              -->
+            </div>
+          </article>
+          <br>
+          <h4 class="title is-5">Older versions (not recommended)</h4>
+          <a class="button is-warning" style="margin-right: 10px;" href="https://github.com/GlowstoneMC/Glowstone/releases/download/1.9.4/glowstone.-1.9.4-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.9.x</span></a>
+          <a class="button is-warning" href="https://github.com/GlowstoneMC/Glowstone/releases/download/v1.8.9/glowstone.-1.8.9-SNAPSHOT.jar"><span class="icon"><i class="fa fa-download"></i></span> <span>Download for 1.8.9</span></a>
+
+        </div>
       </div>
     </section>
 
@@ -111,6 +170,34 @@
     <script charset="utf-8" src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js">
     </script>
     <script src="js/bulma.js">
+    </script>
+    <script src="js/download.js">
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 1000, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
     </script>
   </body>
 </html>
