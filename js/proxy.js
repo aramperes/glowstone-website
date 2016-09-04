@@ -7,8 +7,8 @@ function needsProxy() {
   return !(host == "www.glowstone.net" || host == "momothereal.github.io" || host == "glowstonemc.github.io");
 }
 
-function getURL(url, cache) {
-  if (!needsProxy() && !cache) {
+function getURL(url, cache, force) {
+  if ((!needsProxy() && !force) && !cache) {
     return url;
   } else if (!cache) {
     return proxy + "?cache=false&url=" + btoa(url);
