@@ -152,7 +152,7 @@
           </p>
 
           <p>
-            Glowstone would not be possible without <a href="https://github.com/GlowstoneMC/Glowstone#credits">these folks</a> — thanks for your time and passion!
+            Glowstone would not be possible without <a target="_blank" href="https://github.com/GlowstoneMC/Glowstone#credits">these folks</a> — thanks for your time and passion!
           </p>
 
           <div>
@@ -173,20 +173,7 @@
     </script>
     <script src="js/download.js">
     </script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $("a").on('click', function(event) {
-          if (this.hash !== "") {
-            event.preventDefault();
-            var hash = this.hash;
-            $('html, body').animate({
-              scrollTop: $(hash).offset().top
-            }, 1000, function(){
-              window.location.hash = hash;
-            });
-          }
-        });
-      });
+    <script src="js/general.js">
     </script>
   </body>
 </html>
