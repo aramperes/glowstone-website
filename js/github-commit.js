@@ -1,7 +1,7 @@
 $(function() {
   $.getJSON("https://api.github.com/repos/GlowstoneMC/Glowstone/commits", function(data) {
     var commit = data[0].commit;
-    var author = commit.committer.name;
+    var author = commit.author.name;
     var sha = commit.url.replace("https://api.github.com/repos/GlowstoneMC/Glowstone/git/commits/", "");
     var message = commit.message;
     var link = "https://github.com/GlowstoneMC/Glowstone/commit/" + sha;
