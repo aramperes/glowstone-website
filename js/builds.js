@@ -6,10 +6,8 @@ $(function() {
       '<thead>' +
         '<tr>' +
           '<th><span class="icon"><i class="fa fa-server"></i></span></th>' +
-          '<th>Status</th>' +
           '<th>Date</th>' +
           '<th>Trigger</th>' +
-          '<th><span class="icon"><i class="fa fa-github"></i></span></th>' +
           '<th><span class="icon"><i class="fa fa-download"></i></span></th>' +
         '</tr>' +
       '</thead>' +
@@ -19,10 +17,8 @@ $(function() {
     var model =
     '<tr>' +
       '<td>{buildnumber}</td>' +
-      '<td>&nbsp;&nbsp;{state}</td>' +
       '<td>{date}</td>' +
       '<td>{reason}</td>' +
-      '<td>{commit}</td>' +
       '<td>{download}</td>' +
     '</tr>';
     var content = "";
@@ -34,20 +30,18 @@ $(function() {
       if (state == "successful") {
         stateIcon = '<span class="icon" style="color: #97cd76;"><i class="fa fa-check"></i></span>';
       } else if (state == "failed") {
-        stateIcon = '<span class="icon" style="color: #ed6c63;"><i class="fa fa-cross"></i></span>';
+        stateIcon = '<span class="icon" style="color: #ed6c63;"><i class="fa fa-check"></i></span>';
       }
-      var commit = '<a class="is-disabled"><span class="icon" style="color: lightgray;"><i class="fa fa-github"></i></span></a>';
       var reason = b.buildReason;
       var date = b.buildRelativeTime;
       if ("vcsRevisionKey" in b) {
-        reason = 'Commit &nbsp;<code>' + b.vcsRevisionKey.substr(0, 7) + '</code>&nbsp;&nbsp;by&nbsp;' + b.buildReason.replace("Changes by ", "");
-        commit = '<a href="https://github.com/GlowstoneMC/Glowstone/commit/' + b.vcsRevisionKey + '"><span class="icon"><i class="fa fa-github"></i></span></a>';
+        reason = '<a target="_blank" href="https://github.com/GlowstoneMC/Glowstone/commit/' + b.vcsRevisionKey + '"><span class="icon"><i class="fa fa-github"></i></span></a>&nbsp;Commit &nbsp;<code>' + b.vcsRevisionKey.substr(0, 7) + '</code>&nbsp;&nbsp;by&nbsp;' + b.buildReason.replace("Changes by ", "");
       }
-      var download = '<a class="is-disabled"><span class="icon" style="color: lightgray;"><i class="fa fa-download"></i></span></a>';
-      if (b.artifacts.artifact.length > 0) {
+      var download = '<span class="icon" style="color: #ed6c63;"><i class="fa fa-times"></i></span>';
+      if (b.artifacts.artifact.length > 0 && b.buildNumber != "226") {
         download = '<a href="' + b.artifacts.artifact[0].link.href + '"><span class="icon"><i class="fa fa-download"></i></span></a>';
       }
-      content += model.replace("{buildnumber}", buildnumber).replace("{state}", stateIcon).replace("{date}", date).replace("{reason}", reason).replace("{commit}", commit).replace("{download}", download);
+      content += model.replace("{buildnumber}", buildnumber).replace("{date}", date).replace("{reason}", reason).replace("{download}", download);
     }
     $("#builds-parent").html(base.replace("{builds}", content));
   });
