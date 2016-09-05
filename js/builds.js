@@ -38,8 +38,8 @@ $(function() {
         reason = '<a target="_blank" href="https://github.com/GlowstoneMC/Glowstone/commit/' + b.vcsRevisionKey + '"><span class="icon"><i class="fa fa-github"></i></span></a>&nbsp;Commit &nbsp;<a target="_blank" href="https://github.com/GlowstoneMC/Glowstone/commit/' + b.vcsRevisionKey + '"><code>' + b.vcsRevisionKey.substr(0, 7) + '</code></a>&nbsp;&nbsp;by&nbsp;' + b.buildReason.replace("Changes by ", "");
       }
       var download = '<span class="icon" style="color: #ed6c63;"><i class="fa fa-times"></i></span>';
-      if (b.artifacts.artifact.length > 0 && b.buildNumber != "226") {
-        if (b.state.toLowerCase() == "successful" && b.buildNumber != "227") {
+      if (b.artifacts.artifact.length > 0) {
+        if (b.state.toLowerCase() == "successful") {
           download = '<a href="' + b.artifacts.artifact[0].link.href + '"><span class="icon icon-success"><i class="fa fa-download"></i></span></a>';
         } else {
           download = '<a href="' + b.artifacts.artifact[0].link.href + '"><span class="icon icon-warning"><i class="fa fa-download"></i></span></a>';
