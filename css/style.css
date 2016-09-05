@@ -16,6 +16,18 @@
     border-color: white;
     color: #f7931d;
 }
+a .icon-success {
+  color: #7bbf51;
+}
+a .icon-success:hover {
+  color: green;
+}
+a .icon-warning {
+  color: #fbda41;
+}
+a .icon-warning:hover {
+  color: orange;
+}
 .content a:not(.button):hover {
   border-bottom-color: #f7931d;
 }
