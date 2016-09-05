@@ -1,11 +1,11 @@
 
-function download(url) {
+function download(url, warning) {
   console.log("Hello");
   if ($("#download-warning").is(":hidden")) {
-    $("#download-warning").slideDown(500);
+    if (warning) {$("#download-warning").slideDown(500);}
     window.open(url);
   } else {
-    $("#download-warning").slideUp(500);
+    if (warning) {$("#download-warning").slideUp(500);}
   }
 }
 
@@ -15,6 +15,6 @@ $(function() {
     download("https://bamboo.gserv.me/browse/GSPP-SRV/latest/artifact/shared/Version-Independent-Server-JAR/glowstone.jar");
   });
   $("#download-snapshot").click(function() {
-    download("https://204-33457443-gh.circle-artifacts.com/0//tmp/circle-artifacts.qebqzFq/glowstone++-1.11-16w35a-SNAPSHOT.jar");
+    download("https://204-33457443-gh.circle-artifacts.com/0//tmp/circle-artifacts.qebqzFq/glowstone++-1.11-16w35a-SNAPSHOT.jar", true);
   });
 });
