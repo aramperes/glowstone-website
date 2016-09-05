@@ -152,19 +152,17 @@
           <p>
             Made with ♥ by the <a href="https://github.com/GlowstoneMC/">Glowstone project</a>. Our project is licensed under the <a href="https://github.com/GlowstoneMC/Glowstone/blob/master/LICENSE">MIT</a> license.
           </p>
-
           <p>
             Glowstone would not be possible without <a target="_blank" href="https://github.com/GlowstoneMC/Glowstone#credits">these folks</a> — thanks for your time and passion!
           </p>
-
           <div>
-            <iframe class="github-btn" frameborder="0" height="20px" scrolling="0" src="https://ghbtns.com/github-btn.html?user=GlowstoneMC&amp;repo=Glowstone&amp;type=star&amp;count=true" width="105px"></iframe>
+            <iframe class="github-btn" frameborder="0" height="20px" scrolling="0" src="https://ghbtns.com/github-btn.html?user=GlowstoneMC&amp;repo=Glowstone&amp;type=star&amp;count=true" width="85px"></iframe>&nbsp;
+            <a href="https://discord.gg/TFJqhsC" target="_blank" style="border: none;"><img src="https://img.shields.io/badge/discord-glowstone-738bd7.svg?style=flat-square"></a>&nbsp;
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Check%20out%20%40GlowstoneMC%27s%20new%20website%21">Tweet</a>&nbsp;
           </div>
         </div>
       </div>
     </footer>
-    <script async id="twitter-wjs" src="https://platform.twitter.com/widgets.js">
-    </script>
     <script src="js/jquery-2.2.0.min.js">
     </script>
     <script charset="utf-8" src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js">
@@ -180,6 +178,25 @@
     <script async src="js/news-forums.js">
     </script>
     <script src="js/general.js">
+    </script>
+    <!-- Twitter -->
+    <script>
+      window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+          t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+          t._e.push(f);
+        };
+
+        return t;
+      }(document, "script", "twitter-wjs"));
     </script>
     <script src="js/instantclick.min.js" data-no-instant></script>
     <script data-no-instant>InstantClick.init();</script>
