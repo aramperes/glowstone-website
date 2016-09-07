@@ -74,3 +74,6 @@ a {
   -webkit-transition: none 86ms ease-out;
   transition: none 86ms ease-out;
 }
+#instantclick-bar {
+  background: #f5f7fa;
+}
