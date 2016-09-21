@@ -10,6 +10,6 @@ function download(url, warning) {
 $(function() {
   $("#download-snapshot").removeAttr("href");
   $("#download-snapshot").click(function() {
-    download("https://204-33457443-gh.circle-artifacts.com/0//tmp/circle-artifacts.qebqzFq/glowstone++-1.11-16w35a-SNAPSHOT.jar", true);
+    download("https://251-33457443-gh.circle-artifacts.com/0//tmp/circle-artifacts.tHzq1kg/glowstone++-1.11-16w38a-SNAPSHOT.jar", true);
   });
 });
