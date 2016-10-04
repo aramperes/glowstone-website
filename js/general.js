@@ -10,4 +10,13 @@ $(document).ready(function(){
       });
     }
   });
+  $("#irc").on('click', function(event) {
+    $("#ircModal").fadeIn(400);
+  });
+  $("#ircModalClose").on('click', function(event){
+    $("#ircModal").fadeOut(300);
+  });
+  $("#ircModalBack").on('click', function(event){
+    $("#ircModal").fadeOut(300);
+  });
 });

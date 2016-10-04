@@ -24,7 +24,7 @@
             </div>
             <span class="nav-toggle" id="nav-toggle"><span></span> <span></span> <span></span></span>
             <div class="nav-right nav-menu" id="nav-menu">
-              <a class="nav-item" href="https://forums.glowstone.net/">Forums</a> <a class="nav-item" href="https://discord.gg/TFJqhsC">Discord</a> <a class="nav-item" href="https://webchat.esper.net/?nick=webchat-.....&channels=glowstone&prompt=0">IRC</a> <a class="nav-item" href="https://github.com/GlowstoneMC/Glowstone/wiki">Wiki</a> <span class="nav-item"><a class="button is-light is-outlined" href="#downloads"><span class="icon"><i class="fa fa-download"></i></span> <span>Download</span></a></span>
+              <a class="nav-item" href="https://forums.glowstone.net/">Forums</a> <a class="nav-item" href="https://discord.gg/TFJqhsC">Discord</a> <a class="nav-item is-hidden-touch" href="#" id="irc">IRC</a> <a class="nav-item" href="https://github.com/GlowstoneMC/Glowstone/wiki">Wiki</a> <span class="nav-item"><a class="button is-light is-outlined" href="#downloads"><span class="icon"><i class="fa fa-download"></i></span> <span>Download</span></a></span>
             </div>
           </nav>
         </div>
@@ -65,7 +65,7 @@
                   <a class="button is-light is-outlined is-fullwidth" href="https://forums.glowstone.net"><span class="icon"><i class="fa fa-comments"></i></span> <span>Forums</span></a>
                 </div>
                 <div class="column is-3">
-                  <a class="button is-light is-outlined is-fullwidth" href="docs.html"><span class="icon"><i class="fa fa-file-text-o"></i></span> <span>JavaDocs</span></a>
+                  <a class="button is-light is-outlined is-fullwidth" href="docs.html"><span class="icon"><i class="fa fa-file-text-o"></i></span> <span>Javadocs</span></a>
                 </div>
               </div>
               <div class="columns is-hidden-desktop is-hidden-mobile">
@@ -81,7 +81,7 @@
                   <a class="button is-light is-outlined is-fullwidth" href="https://github.com/GlowstoneMC/Glowstone"><span class="icon" style=""><i class="fa fa-code-fork"></i></span> <span>Source Code</span></a>
                 </div>
                 <div class="column is-hakf">
-                  <a class="button is-light is-outlined is-fullwidth" href="docs.html"><span class="icon"><i class="fa fa-file-text-o"></i></span> <span>JavaDocs</span></a>
+                  <a class="button is-light is-outlined is-fullwidth" href="docs.html"><span class="icon"><i class="fa fa-file-text-o"></i></span> <span>Javadocs</span></a>
                 </div>
               </div>
               <div class="columns is-hidden-desktop is-hidden-tablet">
@@ -95,7 +95,7 @@
                   <a class="button is-light is-outlined is-fullwidth" href="https://forums.glowstone.net"><span class="icon"><i class="fa fa-comments"></i></span> <span>Forums</span></a>
                 </div>
                 <div class="column is-3">
-                  <a class="button is-light is-outlined is-fullwidth" href="docs.html"><span class="icon"><i class="fa fa-file-text-o"></i></span> <span>JavaDocs</span></a>
+                  <a class="button is-light is-outlined is-fullwidth" href="docs.html"><span class="icon"><i class="fa fa-file-text-o"></i></span> <span>Javadocs</span></a>
                 </div>
               </div>
             </div>
@@ -264,6 +264,35 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal" style="display: none;" id="ircModal">
+      <div class="modal-background" id="ircModalBack"></div>
+      <div class="modal-card" style="top:10vh;">
+        <p style="margin-top:20px; margin-left:20px;"><span style="padding-top:100px;"class="title is-3">Joining using an IRC client</span> <button class="delete" id="ircModalClose" style="float:right;margin-right:10px;"></button></p>
+        <section class="modal-card-body" style="padding-bottom:30px;">
+          <p>Connect to EsperNet using your preferred IRC client, and join the <code>#glowstone</code> channel.</p>
+          <p class="control has-addons" style="margin-top:10px;">
+            <input class="input" onClick="this.select();" style="width: 50%;" type="text" value="irc.esper.net" readonly>
+            <a class="button" href="irc://irc.esper.net">
+              <i class="fa fa-external-link" style="font-size:13px;"></i>
+            </a>
+          </p>
+          <hr>
+          <p style="margin-top:-15px;"class="title is-3">Joining IRC via Webchat</p>
+          <p>Alternatively, you can connect to our IRC channel in your browser via <a href="https://webchat.esper.net/?nick=webchat-.....&channels=glowstone">webchat</a>.</p>
+        </p>
+        <hr>
+        <p style="margin-top:-15px;"class="title is-3">Not a fan of IRC? Join <a href="https://discordapp.com" target="_blank">Discord</a>!</p>
+        <p>You can also join our Discord server! Simply create an account and join our guild using the invitation link:</p>
+        <p class="control has-addons" style="margin-top:10px;">
+          <input class="input" onClick="this.select();" style="width: 50%;" type="text" value="https://discord.gg/TFJqhsC" readonly>
+          <a class="button" href="https://discord.gg/TFJqhsC">
+            <i class="fa fa-external-link" style="font-size:13px;"></i>
+          </a>
+        </p>
+        </section>
+      </div>
+    </div>
     <script src="js/jquery-2.2.0.min.js">
     </script>
     <script charset="utf-8" src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js">
