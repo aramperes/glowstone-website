@@ -34,10 +34,11 @@ $(function() {
       }
       var reason = b.buildReason;
       var date = b.buildRelativeTime;
-      if (b.buildReason.includes("Manual run ")) {
-        reason = b.buildReason;
-      } else if ("vcsRevisionKey" in b) {
-        reason = '<a target="_blank" href="https://github.com/GlowstoneMC/Glowstone/commit/' + b.vcsRevisionKey + '"><span class="icon"><i class="fa fa-github"></i></span></a>&nbsp;Commit &nbsp;<a target="_blank" href="https://github.com/GlowstoneMC/Glowstone/commit/' + b.vcsRevisionKey + '"><code>' + b.vcsRevisionKey.substr(0, 7) + '</code></a>&nbsp;&nbsp;by&nbsp;' + b.buildReason.replace("Changes by ", "");
+      if ("vcsRevisionKey" in b) {
+        reason = '<a target="_blank" href="https://github.com/GlowstoneMC/Glowstone/commit/' + b.vcsRevisionKey + '"><span class="icon"><i class="fa fa-github"></i></span></a>&nbsp;Commit &nbsp;<a target="_blank" href="https://github.com/GlowstoneMC/Glowstone/commit/' + b.vcsRevisionKey + '"><code>' + b.vcsRevisionKey.substr(0, 7) + '</code></a>&nbsp;&nbsp;by&nbsp;' + b.buildReason.replace("Changes by ", "").replace("Manual run by ", "");
+      }
+      b.buildReason.includes("Manual run ") {
+        reason += ' (manual)';
       }
       var download = '<span class="icon" style="color: #ed6c63;"><i class="fa fa-times"></i></span>';
       if (b.artifacts.artifact.length > 0) {
